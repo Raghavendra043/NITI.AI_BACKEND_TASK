@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "2724e876-93a7-40aa-a0fe-a584a7e4be52",
+		"name": "Niti.AI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consent Status",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "{{clientId}}",
+						"type": "text"
+					},
+					{
+						"key": "clientSecret",
+						"value": "{{clientSecret}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/consent/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"consent",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2f396b94-93e9-4bb1-9231-5dc7aca81da5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "{{clientId}}",
+						"type": "text"
+					},
+					{
+						"key": "clientSecret",
+						"value": "{{clientSecret}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating Consent",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "{{clientId}}",
+						"type": "text"
+					},
+					{
+						"key": "clientSecret",
+						"value": "{{clientSecret}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobileNumber\":\"8977664489\",\r\n    \"consentTypes\":[\"TRANSACTIONS\", \"PROFILE\", \"SUMMARY\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/consent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"consent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "{{clientId}}",
+						"type": "text"
+					},
+					{
+						"key": "clientSecret",
+						"value": "{{clientSecret}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/data/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"data",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "e73a3198-648d-48d0-851c-4f287e13b9d9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIU's",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "{{clientId}}",
+						"type": "text"
+					},
+					{
+						"key": "clientSecret",
+						"value": "{{clientSecret}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/fiuList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"fiuList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data Fetch",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "{{clientId}}",
+						"type": "text"
+					},
+					{
+						"key": "clientSecret",
+						"value": "{{clientSecret}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/getData/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"getData",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "45a75282-94af-4b59-9bae-e28c90d971f9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating Data Session",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "{{clientId}}",
+						"type": "text"
+					},
+					{
+						"key": "clientSecret",
+						"value": "{{clientSecret}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/dataSession/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"dataSession",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2f396b94-93e9-4bb1-9231-5dc7aca81da5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "clientId",
+			"value": "255d0b6c-492d-44cf-8581-e9494c7b0914"
+		},
+		{
+			"key": "clientSecret",
+			"value": "9c2fc756-3d17-46d6-b28d-be4d71953e83"
+		}
+	]
+}
